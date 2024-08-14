@@ -1,0 +1,1001 @@
+@font-face {
+    font-family: "Plain Light";
+    src: url(./Fonts/plain-light-webfont.ttf);
+}
+@font-face {
+    font-family: "Plain Regular";
+    src: url(./Fonts/plain-regular-webfont.ttf);
+}
+@font-face {
+    font-family: "silkserif";
+    src: url(./Fonts/silkserif-lightitalic-webfont.ttf);
+}
+/* @font-face {
+    font-family: "silkserif";
+    src: url(./Fonts/silkserif-regularitalic-webfont.ttf);
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plain Light";
+    color: white;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* #crsr{
+    height: 2vw;
+    width: 2vw;
+    border-radius: 50%;
+    position: fixed;
+    background-color: transparent;
+    border: 2px solid white;
+    z-index: 999;
+    mix-blend-mode: difference;
+    transform: translate(-50%,-50%);
+} */
+
+.mousefollower{ /* By writing .mousefollower here we are actually targetting Shery.mousefollower */
+    border: 2px solid #fff;
+    background-color: white;
+    scale:2;
+    mix-blend-mode: difference;
+}
+
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: #0b0b0b;
+    position: fixed;
+    z-index: 99;
+    padding: 25vh 10vw;
+}
+
+.line{
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3vw;
+
+}
+
+#line1-part1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+#line1-part1 h5, #line1-part1 h4{
+    font-size: 4vw;
+    font-weight: 200;
+    font-family: "silkserif";
+}
+
+#line1-part1 h4{
+    width: 5vw;
+    text-align: right;
+}
+
+.line h1{
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.line h2{
+    font-size: 5vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anime{
+    0%{
+        font-family: "Plain Light";
+        -webkit-text-stroke: 1px #fff;
+        color: white;
+        font-weight: 500;
+        opacity: 1;
+    }
+    47%{
+        font-family: "Plain Light";
+        -webkit-text-stroke: 1px #fff;
+        color: white;
+        font-weight: 500;
+        opacity: 0;
+    }
+    50%{
+        font-family: "silkserif";
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 1;
+    }
+    100%{
+        font-family: "silkserif";
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 0;
+    }
+    
+}
+
+
+
+
+
+
+#main{
+    position: relative;
+    background-color: #151515;
+
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+}
+
+#page1 #nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 4vw;
+}
+
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+
+}
+
+#nav-part2 h4{
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+.page1Lines{
+    width: 70%;
+    margin-left: 25%;
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    z-index: 999;
+}
+
+.page1Lines:nth-child(2){
+    margin-top: 20vh;
+}
+
+.page1Lines h1{
+    font-size: 6.8vw;
+    line-height: 7vw;
+    text-transform: uppercase;
+}
+
+#page1Line1::before{
+    content: "01";
+    position: absolute;
+    font-size: 3vw;
+    font-family: "silkserif";
+    left: 15%;
+    top: 32%; 
+}
+
+.page1Lines h2{
+    font-size: 6.8vw;
+    line-height: 7vw;
+    text-transform: uppercase;
+    color: white;
+}
+
+.page1Lines h2:hover{
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+}
+
+#page2{
+    height: 100vh;
+    width: 100%;
+    padding-top: 20vh;
+    position: relative;
+}
+
+#video-container{
+    height: 65vh;
+    width: 71vw;
+    position: relative;
+    left: 28%;
+    background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#video-container-crsr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFA63D;
+    height: 8vw;
+    width: 8vw;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 99;
+    top: -15%;
+    left: 70%;
+}
+
+#video-container-crsr i{
+    font-size: 2vw;
+}
+
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 17vh 2vw;
+    margin-bottom: 20vh;
+    margin-top: 20vh;
+}
+
+#page3 h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 28vw;
+    margin-top: 5vw;
+
+}
+
+#page3 h1::before{
+    content: "02";
+    position: absolute;
+    font-size: 3vw;
+    font-family: "silkserif";
+    left: -20%;
+    top: 20%;
+}
+
+#page3 .underLine{
+    margin: 5vh 0;
+    margin-left: 28vw;
+    height: 2px;
+    background-color: #fff;;
+}
+
+#image-div-container{
+    /* background-color: red; */
+    padding: 1vw;
+    position: relative;
+
+    display: flex;
+    gap: 5vw;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    
+}
+.image-div{
+    height: 35vw;
+    width: 27vw;
+    /* background-color: blue; */
+    position: relative;
+    overflow: hidden;
+}
+
+.image-div:nth-child(1){
+    height: 28vw;
+    width: 20vw;
+}
+
+.image-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.page3-circle1{
+    height: 25vw;
+    width: 25vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+    margin-left: 10vw;
+    position: relative;
+}
+.page3-circle1 svg{
+    height: 30%;
+}
+.page3-circle2{
+    height: 25vw;
+    width: 25vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+.page3-circle2 svg{
+    height: 30%;
+    rotate: -45deg;
+}
+
+.circle-in{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: black;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: 0;
+    border-radius: 50%;
+    transition: all ease 0.1s;
+}
+.circle-in p{
+    width: 65%;
+    font-weight: 500;
+    font-size: 1vw;
+    text-align: center;
+    color: black;
+    scale: 0;
+    transition: all ease 0.3s;
+    transition-delay: 0.4s;
+}
+
+.page3-circle1:hover .circle-in{
+    scale: 1;
+}
+.page3-circle1:hover p{
+    scale: 1;
+}
+.page3-circle2:hover .circle-in{
+    scale: 1;
+}
+.page3-circle2:hover p{
+    scale: 1;
+}
+
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    padding: 7vh 0;
+    margin-top: 20vw;
+}
+
+#page4-content{
+    width: 74vw;
+    margin-left: 26%;
+}
+
+#page4-content h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+
+}
+
+#page4-content h1::before{
+    content: "03";
+    position: absolute;
+    font-size: 3vw;
+    font-family: "silkserif";
+    left: -20%;
+    top: 20%;
+}
+
+#page4-content .underLine{
+    height: 2px;
+    width: 90%;
+    margin: 5vw 0;
+    background-color: white;
+}
+
+#page4-content>p{
+    font-size: 2.1vw;
+    width: 50%;
+    margin-bottom: 3vw;
+
+}
+
+#page4-flex{
+    display: flex;
+
+}
+
+#page4-flex img{
+    width: 50%;
+    object-fit: cover
+}
+
+#page4-flex p{
+    font-size: 1vw;
+    width: 20%;
+    margin-left: 1vw;
+}
+
+#page4-blue-div{
+    background-color: #3f7df4;
+    width: 33vw;
+    padding: 3vw;
+    position: relative;
+    margin-top: -35vh;
+    margin-left: 26vw;
+}
+
+.blue-div-elem{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.7vw 0;
+    border-bottom: 2px solid #ffffff94;
+}
+
+.blue-div-elem h4{
+    font-size: 1.35vw;
+    font-weight: 500;
+}
+
+.blue-div-elem p{
+    width: 50%;
+    font-size: 0.7vw;
+}
+
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    padding: 5vw 0;
+    position: relative;
+    margin-top: 20vh;
+}
+
+.elem{
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -2vw;
+}
+
+.elem h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 15px; /* Yaha prr ab total margine 19px ho gayi qki inline block to kra hai aapan ne prr wo bhi 4px ki margin rakhta hai */
+    animation-name: scrollAnime;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.elemRev{
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -2vw;
+}
+
+.elemRev h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    transform: translateX(calc(-100% - 19px));
+    animation-name: scrollAnime;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+.elem span, .elemRev span{
+    font-style: italic;
+    font-family: "silkserif";
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 400;
+}
+
+@keyframes scrollAnime {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 19px)); /* The jerk we are getting in our animation after the first iteration ends was because of the extra pixels available there. That's why we have done 100% - 19px */
+    }
+}
+
+
+#footer{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-left: 28vw;
+    padding-right: 2vw;
+    margin-top: 20vh;
+}
+
+#footerHeading{
+    position: relative;
+}
+
+#footerHeading h1{
+    /* opacity: 1; */
+    font-size: 7vw;
+    width: 60vw;
+    text-transform: uppercase;
+    position: relative;
+}
+#footerHeading h2{
+    /* opacity: 0; */
+    font-family: "silkserif";
+    margin-top: -1vw;
+    font-size: 7vw;
+    width: 60vw;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+}
+
+/* We have to give all the spans of h2 these properties  */
+
+#footerHeading h2 span {
+    font-family: "silkserif";
+    opacity: 0;
+    font-weight: 500;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+}
+
+#footerHeading h1::before{
+    content: "04";
+    position: absolute;
+    font-size: 3vw;
+    font-family: "silkserif";
+    left: -20%;
+    top: 20%;
+}
+
+#footer .underLine{
+    height: 2px;
+    width: 100%;
+    margin: 3vw 0;
+    background-color: white;
+}
+
+#footer-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 15vw;
+    padding-top: 4vw;
+    margin-bottom: 3vw;
+}
+
+#footer-div h6{
+    font-size: 1vw;
+    font-weight: 500;
+    margin-bottom: 1.5vw;
+}
+
+.box{
+    width: 30%;
+}
+
+#footer-div h5{
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+
+
+
+._canvas_container{
+    z-index: 9999 !important;
+    pointer-events: none;
+}
+
+@media (max-width: 600px){
+
+
+    #loader{
+        height: 100%;
+        width: 100%;
+        background-color: #0b0b0b;
+        position: fixed;
+        z-index: 99;
+        padding: 40vh 5vw;
+    }
+    
+    .line{
+        height: fit-content;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 3vw;
+    
+    }
+    
+    #line1-part1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2vw;
+    }
+    
+    #line1-part1 h5, #line1-part1 h4{
+        font-size: 5vw;
+        font-weight: 200;
+        font-family: "silkserif";
+    }
+    
+    #line1-part1 h4{
+        width: 6vw;
+        text-align: right;
+    }
+    
+    .line h1{
+        font-size: 7vw;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+    
+    .line h2{
+        font-size: 6vw;
+        font-weight: 900;
+        text-transform: uppercase;
+        opacity: 0;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+
+
+
+
+    #page1{
+        height: 60vh;
+        width: 100%;
+        padding-top: 1px;
+    }
+    
+    #page1 #nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 4vw 5vw;
+        position: fixed;
+        top: 0;
+    }
+
+    #nav svg{
+        scale: 0.8;
+    }
+    
+    #nav-part2{
+        display: none;
+    }
+
+    
+    .page1Lines{
+        width: 70%;
+        margin-left: 5%;
+    }
+    
+    .page1Lines:nth-child(2){
+        margin-top: 25vh;
+    }
+    
+    .page1Lines h1{
+        font-size: 9vw;
+        line-height: 9vw;
+    }
+    
+    #page1Line1::before{
+        content: "01";
+        position: absolute;
+        font-size: 5vw;
+        font-family: "silkserif";
+        left: 5%;
+        top: 30%; 
+    }
+    
+    .page1Lines h2{
+        font-size: 8vw;
+        line-height: 8vw;
+    }
+
+    #page2{
+        height: 60vh;
+        width: 100%;
+        padding: 5vh 0;
+    }
+    
+    #video-container{
+        height: 45vh;
+        width: 100%;
+        left: 0%;
+    }
+    
+    #video-container-crsr{
+        height: 25vw;
+        width: 25vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    #video-container-crsr i{
+        font-size: 5vw;
+    }
+    
+    #video-container video{
+        height: 100%;
+        width: 100%;
+    }
+
+    #page3{
+        min-height: 60vh;
+        width: 100%;
+        padding: 0 5vw;
+        margin-top: 0vh;
+        margin-bottom: 5vh;
+    }
+    
+    #page3 h1{
+        font-size: 7vw;
+        text-transform: uppercase;
+        position: relative;
+        margin-left: 0vw;
+        margin-top: 0vw;
+        padding-top: 10vh;
+    
+    }
+    
+    #page3 h1::before{
+        content: "02";
+        position: absolute;
+        font-size: 5vw;
+        font-family: "silkserif";
+        left: 0%;
+        top: 30%;
+    }
+    
+    #page3 .underLine{
+        margin: 5vh 0;
+        margin-left: 0vw;
+    }
+    
+    #image-div-container{
+        /* background-color: red; */
+        padding: 0vw;
+    
+        flex-direction: column;
+        
+    }
+    .image-div{
+        height: 60vh;
+        width: 100%;
+    }
+    
+    .image-div:nth-child(1){
+        height: 60vh;
+        width: 100%;
+    }
+    
+    .page3-circle1{
+        display: none;
+    }
+    .page3-circle2{
+        display: none;
+        
+    }
+
+    #page4{
+        min-height: 100vh;
+        width: 100%;
+        padding: 0vh 5vw;
+        margin-top: 0vw;
+    }
+    
+    #page4-content{
+        width: 100%;
+        margin-left: 0%;
+    }
+    
+    #page4-content h1{
+        padding-top: 10vh;
+        font-size: 7vw;
+    
+    }
+    
+    #page4-content h1::before{
+        content: "03";
+        position: absolute;
+        font-size: 5vw;
+        font-family: "silkserif";
+        left: 0%;
+        top: 30%;
+    }
+    
+    #page4-content .underLine{
+        height: 2px;
+        width: 100%;
+        margin: 5vw 0;
+        background-color: white;
+    }
+    
+    #page4-content>p{
+        font-size: 5vw;
+        width: 100%;
+        margin-bottom: 6vw;
+    
+    }
+    
+    #page4-flex{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2vh;
+    
+    }
+    
+    #page4-flex img{
+        width: 100%;
+        object-fit: cover
+    }
+    
+    #page4-flex p{
+        font-size: 3vw;
+        width: 100%;
+        margin-left: 0vw;
+    }
+    
+    #page4-blue-div{
+        background-color: #3f7df4;
+        width: 100%;
+        height: 45vh;
+        padding: 3vw;
+        position: relative;
+        margin-top: 0vh;
+        margin-left: 0vw;
+    }
+    
+    .blue-div-elem{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 1.7vw 0;
+        border-bottom: 2px solid #ffffff94;
+    }
+    
+    .blue-div-elem h4{
+        font-size: 4vw;
+        font-weight: 500;
+    }
+    
+    .blue-div-elem p{
+        width: 50%;
+        font-size: 3vw;
+    }
+    
+    #page5{
+        min-height: 40vh;
+        width: 100%;
+        padding: 5vw 0;
+        position: relative;
+        margin-top: 0vh;
+    }
+    
+    .elem h1{
+        font-size: 10vw;
+    }
+    
+    .elemRev h1{
+        font-size: 10vw;
+    }
+
+    #footer{
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        margin-top: 0;
+    }
+    
+    #footerHeading h1{
+        padding-top: 10vh;
+        font-size: 7vw;
+        width: 60vw;
+    }
+    
+    #footerHeading h1::before{
+        content: "04";
+        position: absolute;
+        font-size: 5vw;
+        font-family: "silkserif";
+        left: 0%;
+        top: 30%;
+    }
+
+    #footerHeading h2{
+        /* opacity: 0; */
+        font-family: "silkserif";
+        margin-top: -1vw;
+        font-size: 7vw;
+        width: 60vw;
+        text-transform: uppercase;
+        position: absolute;
+        top: 0;
+        padding-top: 10vh;
+    }
+    
+    #footer-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-right: 0vw;
+        padding-top: 0vw;
+        margin-bottom: 3vw;
+    }
+    
+    #footer-div h6{
+        font-size: 5vw;
+        font-weight: 600;
+        margin-bottom: 1.5vw;
+        margin-top: 0vw;
+    }
+    
+    .box{
+        width: 30%;
+        margin: 2vh 0;
+    }
+    
+    #footer-div h5{
+        font-size: 3vw;
+        font-weight: 400;
+    }
+    
+}
