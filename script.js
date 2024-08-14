@@ -263,25 +263,25 @@ function footerAnimation() {
 
 function page4Animation(){
   var clutter = "";
-  document.querySelector("#page4-content>p").textContent.split("").forEach(elem=>{
+  document.querySelector("#scrollingAnime").textContent.split("").forEach(elem=>{
     clutter += `<span style="color: #151515;">${elem}</span>`
   })
 
-  document.querySelector("#page4-content>p").innerHTML = clutter;
+  document.querySelector("#scrollingAnime").innerHTML = clutter;
 
-  gsap.to("#page4-content>p span",{
+  gsap.to("#scrollingAnime span",{
     color: "#fff",
     stagger: 0.1,
     scrollTrigger: {
-      trigger: "#page4-content>p",
+      trigger: "#scrollingAnime",
       scroller: "body",
       // markers: true,
       start: "top 85%",
       end: "top 20%",
       scrub: 2,
-      onUpdate: (self)=>{
-        console.log(self.progress);
-      }
+      // onUpdate: (self)=>{
+      //   console.log(self.progress);
+      // }
     }
   })
 }
