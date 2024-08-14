@@ -543,6 +543,8 @@ body{
 #page4-content>p{
     font-size: 2.1vw;
     width: 50%;
+    position: relative;
+    z-index: 999;
     margin-bottom: 3vw;
 
 }

@@ -275,9 +275,9 @@ function page4Animation(){
     scrollTrigger: {
       trigger: "#scrollingAnime",
       scroller: "body",
-      // markers: true,
+      markers: true,
       start: "top 85%",
-      end: "top 20%",
+      end: "top 35%",
       scrub: 2,
       // onUpdate: (self)=>{
       //   console.log(self.progress);
