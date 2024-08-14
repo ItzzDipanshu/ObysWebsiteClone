@@ -18,7 +18,8 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-family: "Plain Light";
     color: white;
 }
@@ -61,19 +62,33 @@ body{
 }
 
 .line{
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 3vw;
 
 }
 
 #line1-part1{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 2vw;
 }
 
@@ -99,8 +114,42 @@ body{
     font-weight: 900;
     text-transform: uppercase;
     opacity: 0;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes anime{
+    0%{
+        font-family: "Plain Light";
+        -webkit-text-stroke: 1px #fff;
+        color: white;
+        font-weight: 500;
+        opacity: 1;
+    }
+    47%{
+        font-family: "Plain Light";
+        -webkit-text-stroke: 1px #fff;
+        color: white;
+        font-weight: 500;
+        opacity: 0;
+    }
+    50%{
+        font-family: "silkserif";
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 1;
+    }
+    100%{
+        font-family: "silkserif";
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 0;
+    }
+    
 }
 
 @keyframes anime{
@@ -154,16 +203,28 @@ body{
 
 #page1 #nav{
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 2vw 4vw;
 }
 
 #nav-part2{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 2vw;
 
 }
@@ -176,10 +237,16 @@ body{
 .page1Lines{
     width: 70%;
     margin-left: 25%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 2vw;
     z-index: 999;
 }
@@ -234,9 +301,15 @@ body{
 }
 
 #video-container-crsr{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: #FFA63D;
     height: 8vw;
     width: 8vw;
@@ -254,7 +327,8 @@ body{
 #video-container video{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     opacity: 0;
 }
 
@@ -297,12 +371,22 @@ body{
     padding: 1vw;
     position: relative;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
     gap: 5vw;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    flex-shrink: 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     
 }
 .image-div{
@@ -321,8 +405,10 @@ body{
 .image-div img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
-    object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
 }
 
 .page3-circle1{
@@ -330,9 +416,15 @@ body{
     width: 25vw;
     border: 2px solid #fff;
     border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 20vh;
     margin-left: 10vw;
     position: relative;
@@ -345,9 +437,15 @@ body{
     width: 25vw;
     border: 2px solid #fff;
     border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: relative;
     
 }
@@ -364,11 +462,19 @@ body{
     left: 0;
     color: black;
     background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     scale: 0;
     border-radius: 50%;
+    -webkit-transition: all ease 0.1s;
+    -o-transition: all ease 0.1s;
     transition: all ease 0.1s;
 }
 .circle-in p{
@@ -378,8 +484,12 @@ body{
     text-align: center;
     color: black;
     scale: 0;
+    -webkit-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
     transition: all ease 0.3s;
-    transition-delay: 0.4s;
+    -webkit-transition-delay: 0.4s;
+         -o-transition-delay: 0.4s;
+            transition-delay: 0.4s;
 }
 
 .page3-circle1:hover .circle-in{
@@ -438,13 +548,16 @@ body{
 }
 
 #page4-flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
 }
 
 #page4-flex img{
     width: 50%;
-    object-fit: cover
+    -o-object-fit: cover;
+       object-fit: cover
 }
 
 #page4-flex p{
@@ -463,9 +576,15 @@ body{
 }
 
 .blue-div-elem{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 1.7vw 0;
     border-bottom: 2px solid #ffffff94;
 }
@@ -502,10 +621,14 @@ body{
     color: transparent;
     display: inline-block;
     margin-right: 15px; /* Yaha prr ab total margine 19px ho gayi qki inline block to kra hai aapan ne prr wo bhi 4px ki margin rakhta hai */
-    animation-name: scrollAnime;
-    animation-duration: 15s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: scrollAnime;
+            animation-name: scrollAnime;
+    -webkit-animation-duration: 15s;
+            animation-duration: 15s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 }
 
 .elemRev{
@@ -521,11 +644,17 @@ body{
     text-transform: uppercase;
     color: transparent;
     display: inline-block;
-    transform: translateX(calc(-100% - 19px));
-    animation-name: scrollAnime;
-    animation-duration: 15s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    -webkit-transform: translateX(calc(-100% - 19px));
+        -ms-transform: translateX(calc(-100% - 19px));
+            transform: translateX(calc(-100% - 19px));
+    -webkit-animation-name: scrollAnime;
+            animation-name: scrollAnime;
+    -webkit-animation-duration: 15s;
+            animation-duration: 15s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
     animation-direction: reverse;
 }
 
@@ -537,12 +666,25 @@ body{
     font-weight: 400;
 }
 
-@keyframes scrollAnime {
+@-webkit-keyframes scrollAnime {
     from{
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
     }
     to{
-        transform: translateX(calc(-100% - 19px)); /* The jerk we are getting in our animation after the first iteration ends was because of the extra pixels available there. That's why we have done 100% - 19px */
+        -webkit-transform: translateX(calc(-100% - 19px));
+                transform: translateX(calc(-100% - 19px)); /* The jerk we are getting in our animation after the first iteration ends was because of the extra pixels available there. That's why we have done 100% - 19px */
+    }
+}
+
+@keyframes scrollAnime {
+    from{
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    to{
+        -webkit-transform: translateX(calc(-100% - 19px));
+                transform: translateX(calc(-100% - 19px)); /* The jerk we are getting in our animation after the first iteration ends was because of the extra pixels available there. That's why we have done 100% - 19px */
     }
 }
 
@@ -605,9 +747,15 @@ body{
 }
 
 #footer-div{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     padding-right: 15vw;
     padding-top: 4vw;
     margin-bottom: 3vw;
@@ -648,19 +796,33 @@ body{
     }
     
     .line{
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         overflow: hidden;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         gap: 3vw;
     
     }
     
     #line1-part1{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         gap: 2vw;
     }
     
@@ -686,8 +848,10 @@ body{
         font-weight: 900;
         text-transform: uppercase;
         opacity: 0;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
+        -webkit-animation-duration: 2s;
+                animation-duration: 2s;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
     }
 
 
@@ -701,9 +865,15 @@ body{
     
     #page1 #nav{
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: flex-end;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
         padding: 4vw 5vw;
         position: fixed;
         top: 0;
@@ -763,7 +933,9 @@ body{
         width: 25vw;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
     }
     
     #video-container-crsr i{
@@ -811,7 +983,13 @@ body{
         /* background-color: red; */
         padding: 0vw;
     
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+    
+        -webkit-box-direction: normal;
+    
+            -ms-flex-direction: column;
+    
+                flex-direction: column;
         
     }
     .image-div{
@@ -874,15 +1052,21 @@ body{
     }
     
     #page4-flex{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column-reverse;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
         gap: 2vh;
     
     }
     
     #page4-flex img{
         width: 100%;
-        object-fit: cover
+        -o-object-fit: cover;
+           object-fit: cover
     }
     
     #page4-flex p{
@@ -902,9 +1086,15 @@ body{
     }
     
     .blue-div-elem{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         padding: 1.7vw 0;
         border-bottom: 2px solid #ffffff94;
     }
@@ -972,10 +1162,19 @@ body{
     }
     
     #footer-div{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
         padding-right: 0vw;
         padding-top: 0vw;
         margin-bottom: 3vw;
