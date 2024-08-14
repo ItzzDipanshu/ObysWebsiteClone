@@ -274,8 +274,8 @@ function page4Animation(){
     stagger: 0.1,
     scrollTrigger: {
       trigger: "#scrollingAnime",
-      scroller: "body",
-      markers: true,
+      scroller: "#main",
+      // markers: true,
       start: "top 85%",
       end: "top 35%",
       scrub: 2,
